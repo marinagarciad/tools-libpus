@@ -2,8 +2,8 @@
 # Company: GMV Aerospace & Defence S.A.U.
 # Licence: GPLv2
 
-from PySide import QtGui, QtCore
-from PySide.QtCore import QDateTime
+from PySide2 import QtGui, QtCore, QtWidgets
+from PySide2.QtCore import QDateTime
 import time
 from .Ui.Ui_AddTCView import Ui_AddTCView
 import json
@@ -21,7 +21,7 @@ class AddTCView(object):
         """
         This is the constructor of the class
         """
-        self.view = QtGui.QDialog()
+        self.view = QtWidgets.QDialog()
         self.window = Ui_AddTCView()
         self.window.setupUi(self.view)
         self.is_19_svc = False
